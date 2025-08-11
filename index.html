@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Registration</title>
+    <!-- Link to Google Fonts for Tamil -->
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans+Tamil&display=swap' rel='stylesheet'> 
+    <link rel="stylesheet" href="styles.css"> <!-- Links to your CSS file -->
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Register Pet</a></li>
+                <li><a href="#">View Registrations</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+            </a>
+        </nav>
+    </header>
+    <head>
+    ...
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .background-container {
+            background-image: url('your-background-image.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+
+    <div class="background-container">
+        <main class="login-container">
+            <div class="header-section">
+                <img src="petserivice-innerbanner.jpg" alt="Pet Registration Logo" class="logo" width="250" height="150"> 
+            </div>
+
+            <h1>Pet Registration Form</h1>
+            <h2>Welcome! Please fill out the form below.</h2>
+
+            <form>
+                <div class="input-group">
+                    <label for="petName">Pet Name:</label>
+                    <input type="text" id="petName" name="petName" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="petBreed">Breed:</label>
+                    <input type="text" id="petBreed" name="petBreed">
+                </div>
+
+                <div class="input-group">
+                    <label for="ownerName">Owner Name:</label>
+                    <input type="text" id="ownerName" name="ownerName" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="ownerEmail">Owner Email:</label>
+                    <input type="email" id="ownerEmail" name="ownerEmail" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="input-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="3"></textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit">Register Pet</button>
+                </div>
+
+                <div class="links">
+                    <a href="#">Forgot Password?</a> | <a href="#">Login</a>
+                </div>
+
+                <div class="register-link">
+                    Don't have an account? <a href="#">Register Now</a>
+                </div>
+            </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script> <!-- Links to your JavaScript file -->
+</body>
+</html>
