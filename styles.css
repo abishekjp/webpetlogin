@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('path/to/background-cityscape.jpg') no-repeat center center/cover; /* Replace with your background city image */
+    color: #333;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #333; /* Dark background color for the navbar */
+    overflow: hidden;
+    width: 100%;
+    position: fixed; /* Fixes the navigation bar at the top */
+    top: 0;
+    z-index: 1000;
+    display: flex; /* Use flexbox for easier alignment */
+    justify-content: space-between; /* Space out the links and the hamburger icon */
+    align-items: center; /* Vertically aligns items in the navbar */
+    padding: 0 20px; /* Add some padding on the sides */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Makes the list items display horizontally */
+}
+  
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+  
+.navbar li a:hover {
+    background-color: #111;
+}
+
+.navbar .icon {
+    display: none; /* Hide the hamburger icon by default on larger screens */
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive Styling for Navigation Bar (using Media Queries) */
+@media screen and (max-width: 600px) { /* Applies these styles when the screen width is 600px or less */
+    .navbar ul {
+        display: none; /* Hide the horizontal links on smaller screens */
+        flex-direction: column; /* Stack the links vertically */
+        width: 100%;
+        background-color: #444; /* Darker background for the mobile menu */
+        position: absolute;
+        top: 100%; /* Position below the main navbar */
+        left: 0;
+    }
+    .navbar .icon {
+        display: block; /* Show the hamburger icon on smaller screens */
+    }
+    .navbar.responsive ul {
+        display: flex; /* Show the mobile menu when the responsive class is active */
+    }
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 20px; /* Adjust position of the hamburger icon when responsive */
+        top: 14px; /* Adjust top position to align with links */
+    }
+    .navbar li {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.background-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* For positioning pet images if they are separate */
+    background-image: url('path/to/your/background-image.jpg'); /* Update this path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden; /* To contain the pet images at the bottom */
+}
+
+.header-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.header-section .logo {
+    width: 50px; /* Adjust as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+.header-section .tamil-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Noto Sans Tamil', sans-serif; /* Use the linked Tamil font */
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #4CAF50; /* Green color from the image */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.links {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.links a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.links .separator {
+    color: #ccc;
+}
+
+.login-btn {
+    background-color: #4CAF50; /* Green login button */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #45a049;
+}
+
+.pet-images {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent background for pet images */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.pet-images img {
+    width: 60px; 
+    height: auto;
+    margin: 20 5px;
+}
+
+.icon-mobile::before {
+    margin-right: 5px;
+}
+
+.icon-pin::before {
+    margin-right: 5px;
+}
+
+/* Basic Responsiveness */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .header-section .tamil-text {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 0.9em;
+    }
+
+    .pet-images img {
+        width: 40px;
+    }
+}
